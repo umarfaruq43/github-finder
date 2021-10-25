@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  border: 1px solid red;
+} */
+
+.equal_div {
+  @apply flex items-center;
+}
+.bold {
+  @apply font-bold text-xl;
+}
+.number {
+  @apply font-bold text-xl inline-block pt-1;
+}
+
+.input_btn {
+  @apply absolute bg-blue-500 px-3 h-4/5 cursor-pointer font-normal top-1/2 right-1  rounded-md transform -translate-y-1/2 focus:outline-none;
+}
+
+.middle_page {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.input {
+  @apply w-full  p-4 rounded-md text-md focus:outline-none;
+}
+
+.right {
+  @apply absolute top-1/2 transform -translate-y-1/2 right-4 cursor-pointer;
+}
