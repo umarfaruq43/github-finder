@@ -1,9 +1,18 @@
 import React from "react";
 import { FaBuilding, FaLink, FaMapMarkerAlt, FaTwitter } from "react-icons/fa";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { BrowserRouter, Link, NavLink, useHistory } from "react-router-dom";
 
 const Links = ({ data }) => {
   const { location, twitter_username, html_url, type } = data;
+
+  const formattedLink = (link) => {
+    if (link.length >= 16) {
+      return link.slice(0, 16) + "...";
+    } else {
+      return link;
+    }
+  };
+
   return (
     <BrowserRouter>
       <div className="equal_div mb-3 ">
@@ -24,12 +33,12 @@ const Links = ({ data }) => {
       <div className="equal_div ">
         <div className="w-1/2 equal_div">
           <FaLink />
-          <NavLink
-            to={html_url ? html_url : "#"}
-            className="inline-block ml-4 text-sm"
+          <a
+            href={html_url ? html_url : "#"}
+            className="inline-block ml-4 text-sm cursor-pointer"
           >
-            {html_url ? "Go to gitHub" : " Not Specified "}
-          </NavLink>
+            {html_url ? formattedLink(html_url) : " Not Specified "}
+          </a>
         </div>
 
         <div className="w-1/2 equal_div">

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ForgetPass from "./components/Auth/ForgetPass";
 import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
+import Err from "./components/Err";
 import MainSearch from "./components/MainSearch";
 
 const App = () => {
@@ -21,8 +22,12 @@ const App = () => {
           <Login />
         </Route>
 
-        <Route exact path="">
+        <Route exact path="/">
           <MainSearch />
+        </Route>
+
+        <Route exact path="">
+          <Err />
         </Route>
       </Switch>
     </BrowserRouter>
