@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBuilding, FaLink, FaMapMarkerAlt, FaTwitter } from "react-icons/fa";
-import { BrowserRouter, Link, NavLink, useHistory } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 const Links = ({ data }) => {
   const { location, twitter_username, html_url, type } = data;

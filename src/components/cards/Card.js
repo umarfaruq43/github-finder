@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 import Details from "./Details";
 import Links from "./Links";
 import Repo from "./Repo";
-import User from "../../assest/img/user.jpeg";
+// import User from "../../assest/img/user.jpeg";
 
 const Card = ({ data }) => {
   return (

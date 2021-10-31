@@ -16,7 +16,7 @@ const Validation = ({ email, userName, password, confirmPassword }) => {
     err.password = " Password must be 8 digit long";
   }
 
-  if (confirmPassword == password) {
+  if (confirmPassword === password) {
     err.confirmPassword = "Password is not the same.";
   }
 
